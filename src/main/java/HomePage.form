@@ -51,12 +51,13 @@
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" attributes="0">
                       <EmptySpace max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="createGameOfLifeButton" linkSize="5" min="-2" max="-2" attributes="0"/>
-                          <Component id="createLangtonsAntButton" linkSize="5" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="createMandelbrotButton" linkSize="5" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="createMinesweeperButton" linkSize="5" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="createTurmitesButton" linkSize="5" alignment="0" min="-2" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                          <Component id="createGameOfLifeButton" linkSize="5" max="32767" attributes="0"/>
+                          <Component id="createLangtonsAntButton" linkSize="5" alignment="0" max="32767" attributes="0"/>
+                          <Component id="createMandelbrotButton" linkSize="5" alignment="0" max="32767" attributes="0"/>
+                          <Component id="createMinesweeperButton" linkSize="5" alignment="0" max="32767" attributes="0"/>
+                          <Component id="createTurmitesButton" linkSize="5" alignment="0" max="32767" attributes="0"/>
+                          <Component id="createSudokuButton" linkSize="5" alignment="0" max="32767" attributes="0"/>
                       </Group>
                       <EmptySpace pref="1019" max="32767" attributes="0"/>
                   </Group>
@@ -75,7 +76,9 @@
                       <Component id="createMinesweeperButton" linkSize="6" min="-2" max="-2" attributes="0"/>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Component id="createTurmitesButton" linkSize="6" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace pref="424" max="32767" attributes="0"/>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <Component id="createSudokuButton" linkSize="6" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace pref="383" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -119,6 +122,14 @@
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="createTurmitesButtonActionPerformed"/>
+              </Events>
+            </Component>
+            <Component class="javax.swing.JButton" name="createSudokuButton">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Create Sudoku"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="createSudokuButtonActionPerformed"/>
               </Events>
             </Component>
           </SubComponents>

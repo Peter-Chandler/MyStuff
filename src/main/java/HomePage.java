@@ -51,6 +51,7 @@ public class HomePage extends javax.swing.JFrame {
         createMandelbrotButton = new javax.swing.JButton();
         createMinesweeperButton = new javax.swing.JButton();
         createTurmitesButton = new javax.swing.JButton();
+        createSudokuButton = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -89,22 +90,30 @@ public class HomePage extends javax.swing.JFrame {
             }
         });
 
+        createSudokuButton.setText("Create Sudoku");
+        createSudokuButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                createSudokuButtonActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout HomePagePanelLayout = new javax.swing.GroupLayout(HomePagePanel);
         HomePagePanel.setLayout(HomePagePanelLayout);
         HomePagePanelLayout.setHorizontalGroup(
             HomePagePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(HomePagePanelLayout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(HomePagePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(createGameOfLifeButton)
-                    .addComponent(createLangtonsAntButton)
-                    .addComponent(createMandelbrotButton)
-                    .addComponent(createMinesweeperButton)
-                    .addComponent(createTurmitesButton))
+                .addGroup(HomePagePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(createGameOfLifeButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(createLangtonsAntButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(createMandelbrotButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(createMinesweeperButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(createTurmitesButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(createSudokuButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap(1019, Short.MAX_VALUE))
         );
 
-        HomePagePanelLayout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {createGameOfLifeButton, createLangtonsAntButton, createMandelbrotButton, createMinesweeperButton, createTurmitesButton});
+        HomePagePanelLayout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {createGameOfLifeButton, createLangtonsAntButton, createMandelbrotButton, createMinesweeperButton, createSudokuButton, createTurmitesButton});
 
         HomePagePanelLayout.setVerticalGroup(
             HomePagePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -119,10 +128,12 @@ public class HomePage extends javax.swing.JFrame {
                 .addComponent(createMinesweeperButton)
                 .addGap(18, 18, 18)
                 .addComponent(createTurmitesButton)
-                .addContainerGap(424, Short.MAX_VALUE))
+                .addGap(18, 18, 18)
+                .addComponent(createSudokuButton)
+                .addContainerGap(383, Short.MAX_VALUE))
         );
 
-        HomePagePanelLayout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {createGameOfLifeButton, createLangtonsAntButton, createMandelbrotButton, createMinesweeperButton, createTurmitesButton});
+        HomePagePanelLayout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {createGameOfLifeButton, createLangtonsAntButton, createMandelbrotButton, createMinesweeperButton, createSudokuButton, createTurmitesButton});
 
         tabsPane.addTab("Home Page", HomePagePanel);
 
@@ -165,6 +176,11 @@ public class HomePage extends javax.swing.JFrame {
         turmitesCount++;
     }//GEN-LAST:event_createTurmitesButtonActionPerformed
 
+    private void createSudokuButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_createSudokuButtonActionPerformed
+        tabsPane.add("Sudoku " + sudokuCount, new Sudoku());
+        sudokuCount++;
+    }//GEN-LAST:event_createSudokuButtonActionPerformed
+
     //<editor-fold defaultstate="collapsed" desc="Generated Variables">
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel HomePagePanel;
@@ -172,6 +188,7 @@ public class HomePage extends javax.swing.JFrame {
     private javax.swing.JButton createLangtonsAntButton;
     private javax.swing.JButton createMandelbrotButton;
     private javax.swing.JButton createMinesweeperButton;
+    private javax.swing.JButton createSudokuButton;
     private javax.swing.JButton createTurmitesButton;
     private javax.swing.JTabbedPane tabsPane;
     // End of variables declaration//GEN-END:variables
@@ -183,6 +200,7 @@ public class HomePage extends javax.swing.JFrame {
     private int turmitesCount = 1;
     private int minesweeperCount = 1;
     private int lifeCount = 1;
+    private int sudokuCount = 1;
     //</editor-fold>
    
 }
