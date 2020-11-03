@@ -58,13 +58,13 @@ I may also upload the final JAR files so that you do not have to build the proje
    - Option to not allow a cell to be marked by a value if that value cannot be entered in that cell
    - Need to remove hard coded colour values and replace with static colour variables
  - General
-  - Standardise the look of the ui across all projects e.g. remove empty space in control panels
-  - Be able to close tabs
-  - Code cleanup
-  - Comment code
-  - Find a better name than MyStuff
-  - Change around the resources directory so that non java files are outside the java directory
-  - Update maven files so that resource files are downloaded properly and fix all file locations in java code
+   - Standardise the look of the ui across all projects e.g. remove empty space in control panels
+   - Be able to close tabs
+   - Code cleanup
+   - Comment code
+   - Find a better name than MyStuff
+   - Change around the resources directory so that non java files are outside the java directory
+   - Update maven files so that resource files are downloaded properly and fix all file locations in java code
 
 
 <a name="conway">
