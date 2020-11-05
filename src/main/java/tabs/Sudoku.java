@@ -7,6 +7,8 @@ import java.awt.event.FocusAdapter;
 import java.awt.event.FocusEvent;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
+import java.io.File;
+import java.io.FileNotFoundException;
 import java.util.Arrays;
 import java.util.HashSet;
 import java.util.Scanner;
@@ -173,7 +175,7 @@ public class Sudoku extends javax.swing.JPanel {
     }
     
     public void selectPuzzle() {
-        String path = "/sudoku/puzzles/";
+        String path = "src\\main\\java\\resources\\sudoku\\puzzles\\";
         String type = (String) difficultyComboBox.getSelectedItem();
         int level = (int) levelSelectSpinner.getValue();
         switch (type) {
@@ -184,9 +186,13 @@ public class Sudoku extends javax.swing.JPanel {
             case "Very Hard": path += "vhard.txt"; break;
         }
         currentSudoku = "";
-        Scanner sc = new Scanner(Sudoku.class.getResourceAsStream(path));
-        for (int i = 0; i < level; i++) {
-            currentSudoku = sc.nextLine();
+        try {
+            Scanner sc = new Scanner(new File(path));
+            for (int i = 0; i < level; i++) {
+                currentSudoku = sc.nextLine();
+            }
+        } catch (FileNotFoundException ex) {
+            ex.printStackTrace();
         }
         reset();
         printSudoku();
